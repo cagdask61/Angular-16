@@ -1,0 +1,26 @@
+<h1 class="text-center mt-1">
+    Effect
+</h1>
+
+<h3 class="text-center">
+    Current Value : {{stateService.getName()}}
+</h3>
+
+<div class="w-full flex row content-center items-baseline">
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Set Value</mat-label>
+        <input matInput type="text" #inputSetRef>
+    </mat-form-field>
+    <button class="ml-1" color="accent" mat-raised-button (click)="setValue(inputSetRef.value)">
+        Set
+    </button>
+</div>
+<div class="w-full flex row content-center items-baseline">
+    <mat-form-field appearance="outline" color="accent">
+        <mat-label>Update Value</mat-label>
+        <input matInput type="text" #inputUpdateRef>
+    </mat-form-field>
+    <button class="ml-1" color="accent" mat-raised-button (click)="updateValue(inputUpdateRef.value)">
+        Update
+    </button>
+</div>

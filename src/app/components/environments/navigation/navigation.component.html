@@ -1,0 +1,45 @@
+<mat-toolbar>
+    <button mat-icon-button>
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>Angular 16</span>
+    <span class="spacer"></span>
+    <button mat-button routerLink="/">
+        Main
+    </button>
+    <button mat-button [matMenuTriggerFor]="signalsMenu">
+        Signals
+    </button>
+    <mat-menu #signalsMenu="matMenu">
+        <button mat-menu-item routerLink="signals">
+            Intro
+        </button>
+        <button mat-menu-item routerLink="signals/set">
+            Set
+        </button>
+        <button mat-menu-item routerLink="signals/update">
+            Update
+        </button>
+        <button mat-menu-item routerLink="signals/effect">
+            Effect
+        </button>
+        <button mat-menu-item routerLink="signals/computed">
+            Computed
+        </button>
+        <button mat-menu-item routerLink="signals/untracked">
+            UnTracked
+        </button>
+        <button mat-menu-item routerLink="signals/mutate">
+            Mutate
+        </button>
+        <button mat-menu-item routerLink="signals/injection-token">
+            Injection-Token
+        </button>
+        <button mat-menu-item routerLink="signals/form">
+            Form - toSignal
+        </button>
+        <button mat-menu-item routerLink="signals/all">
+            All
+        </button>
+    </mat-menu>
+</mat-toolbar>

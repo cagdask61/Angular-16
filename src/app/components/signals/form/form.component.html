@@ -1,0 +1,25 @@
+<div class="w-full h-full">
+    <h1 class="text-center mt-1">Form - toSignal</h1>
+
+    <p>
+        {{this.userFormValueChanges() | json}}
+    </p>
+    <div class="flex content-center">
+        <form [formGroup]="userForm" class="w-20 h-20 flex column items-center rounded"
+            style="background-color: #202020;">
+            <mat-form-field appearance="outline" class="mt-2" color="warn">
+                <mat-label>FirstName</mat-label>
+                <input matInput placeholder="ex. cagdas" formControlName="firstName">
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" color="warn">
+                <mat-label>LastName</mat-label>
+                <input matInput placeholder="ex. kocaman" formControlName="lastName">
+            </mat-form-field>
+
+            <mat-checkbox color="warn" formControlName="status">Status</mat-checkbox>
+
+            <button type="button" mat-stroked-button class="w-10 mt-2" color="accent" (click)="add()">Add</button>
+        </form>
+    </div>
+</div>
