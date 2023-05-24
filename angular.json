@@ -9,7 +9,8 @@
         "@schematics/angular:component": {
           "style": "scss",
           "standalone": true,
-          "skipTests": true
+          "skipTests": true,
+          "inlineStyle": true
         },
         "@schematics/angular:directive": {
           "standalone": true,
@@ -28,7 +29,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:browser-esbuild",
           "options": {
             "outputPath": "dist/ng16",
             "index": "src/index.html",

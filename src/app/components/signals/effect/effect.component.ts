@@ -11,16 +11,16 @@ import { StateService } from 'src/app/services/state.service';
   templateUrl: './effect.component.html',
   styleUrls: ['./effect.component.scss'],
   imports: [
-    MatButtonModule, MatInputModule,MatFormFieldModule
+    MatButtonModule, MatInputModule, MatFormFieldModule
   ]
 })
 export default class EffectComponent {
 
-  readonly stateService: StateService = inject(StateService);
+  private readonly stateService: StateService = inject(StateService);
 
   constructor() {
     effect(() => {
-      console.log("effect", this.stateService.getName());
+      console.log("changed : ", this.stateService.getName());
     });
   }
 

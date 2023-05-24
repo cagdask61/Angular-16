@@ -16,7 +16,7 @@ import { StateService } from 'src/app/services/state.service';
 export default class SetComponent {
 
 
-  readonly stateService: StateService = inject(StateService);
+  private readonly stateService: StateService = inject(StateService);
 
   setValue(value: string) {
     this.stateService.setName(value);

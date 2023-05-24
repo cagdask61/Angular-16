@@ -15,7 +15,7 @@ import { StateService } from 'src/app/services/state.service';
 })
 export default class UpdateComponent {
 
-  readonly stateService: StateService = inject(StateService);
+  private readonly stateService: StateService = inject(StateService);
 
   updateValue(value: string) {
     this.stateService.updateName(value);

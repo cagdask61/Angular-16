@@ -5,6 +5,8 @@ import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatIconModule } from "@angular/material/icon";
 import { MatButtonModule } from "@angular/material/button";
 import { MatMenuModule } from "@angular/material/menu";
+import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+
 
 @Component({
   selector: 'app-navigation',
@@ -16,9 +18,7 @@ import { MatMenuModule } from "@angular/material/menu";
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    MatMenuModule,
+    MatMenuModule
   ]
 })
-export default class NavigationComponent {
-
-}
+export default class NavigationComponent { }

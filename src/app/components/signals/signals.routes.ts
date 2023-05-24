@@ -2,7 +2,7 @@ import { Routes } from "@angular/router";
 
 
 const SIGNALS_ROUTES: Routes = [
-    { path: '', loadComponent: () => import('./intro/intro.component') },
+    { path: '', redirectTo: 'set', pathMatch: "full" },
     { path: 'set', loadComponent: () => import('./set/set.component') },
     { path: 'update', loadComponent: () => import('./update/update.component') },
     { path: 'effect', loadComponent: () => import('./effect/effect.component') },

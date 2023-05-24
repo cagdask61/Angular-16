@@ -1,19 +1,14 @@
 <mat-toolbar>
-    <button mat-icon-button>
-        <mat-icon>menu</mat-icon>
-    </button>
     <span>Angular 16</span>
     <span class="spacer"></span>
-    <button mat-button routerLink="/">
+    <button mat-stroked-button routerLink="/" class="mr-1">
         Main
     </button>
-    <button mat-button [matMenuTriggerFor]="signalsMenu">
+
+    <button mat-stroked-button [matMenuTriggerFor]="signalsMenu">
         Signals
     </button>
     <mat-menu #signalsMenu="matMenu">
-        <button mat-menu-item routerLink="signals">
-            Intro
-        </button>
         <button mat-menu-item routerLink="signals/set">
             Set
         </button>
@@ -42,4 +37,5 @@
             All
         </button>
     </mat-menu>
+
 </mat-toolbar>
